@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
     "title": {
-      "text": "Double vaccinations: UK localities",
-      "subtitle":"Total number of people fully vaccinated according to date of second dose",
+      "text": "COVID cases: UK localities",
+      "subtitle":"Total number of COVID cases according to publish date",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
