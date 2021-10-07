@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Newport", "Cambridge", "Aberdeen City"]}
+          "oneOf": ["Newport", "Cardiff", "Aberdeen City"]}
           }
   
   
