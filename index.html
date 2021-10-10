@@ -12,6 +12,17 @@
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
+<!--Title-->
+<title>Data Science</title>
+
+<!--CSS-->
+<link rel="stylesheet" href="index.css">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+</style>
+
+
 </head>
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
@@ -22,6 +33,10 @@
 
 <body>
 
+  <h1> My Data Science Portfolio, 2021.</h1>
+
+
+  <p>This is my first interactive chart to present Covid Cases in UK regions</p>
 <!--Chart 1 -->
   <div class="chart" id="chart1">
       <script>
@@ -30,6 +45,7 @@
       </script>
   </div>
 
+ <p>This is my second chart using data to show UK productivity</p>
 <!--Chart 2 -->
 <div class="chart" id="chart2">
     <script>
@@ -38,6 +54,7 @@
     </script>
 </div>
 
+<p>This is my third chart presenting the most common brands that litter the UK's beaches</p>
 <!--Chart 3: Beach litter-->
 <div class="chart" id="chart3">
   <script>
@@ -46,7 +63,8 @@
   </script>
 </div>
 
-<!--Chart 4: Cumulative second doses, API-->
+<p>This is my fourth chart which takes data from a government API</p>
+<!--Chart 4: Cumulative Covid cases, API-->
 <div class="chart" id="chart4">
   <script>
     var myChart4 = "chart4_doubleVaxAPI.json";
@@ -54,7 +72,9 @@
   </script>
 </div>
 
-<!--Chart 5: Beach litter-->
+
+<p> This is my fifth chart showing double vaccinations using data hosted on Github</p>
+<!--Chart 5: Double vaccinations, CSV file-->
 <div class="chart" id="chart5">
   <script>
     var myChart5 = "chart5_doubleVaxStatic.json";
