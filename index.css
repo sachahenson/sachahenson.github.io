@@ -24,13 +24,16 @@ color: #e4effa;
 
 
 .chart{
-    width: 330px;
-    border-width: 10px;
+    width: auto;
+    height: auto;
+    border-width: 5px;
     background-color: white;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: auto;
     border-color: white;
     margin: auto;
+    align-items: center;
+    justify-content: center;
 
 
 }
