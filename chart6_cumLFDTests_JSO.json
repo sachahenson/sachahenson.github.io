@@ -65,7 +65,7 @@
 
 
   "encoding": {
-    "x": {"field": "Area name", "type": "nominal", "axis": {"labelAngle": 45}}, "title":null
+    "x": {"field": "Area name", "type": "nominal", "axis": {"labelAngle": 45}, "title":null},
     "y": {"field": "Cum LFD tests", "type": "quantitative"}
   }
 }
