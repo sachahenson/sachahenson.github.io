@@ -1,19 +1,19 @@
 
 body{
 
-    background-color: #436148;
+    background-color: #424751;
     max-width: 450px;
     margin: auto;
 }
 
 h1{
 
-    color: #bdce9f;
+    color: #d0f1fd;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
 h3{
-    color: #f4c245;
+    color: #efe9e6;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -27,10 +27,10 @@ color: #e4effa;
     width: auto;
     height: auto;
     border-width: 5px;
-    background-color: white;
+    background-color: #424751;
     border-style: solid;
     border-radius: auto;
-    border-color: white;
+    border-color: #424751;
     margin: auto;
     align-items: center;
     justify-content: center;
