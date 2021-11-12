@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    
+    "title": {
+      "text": "Gender wage gap",
+      "subtitle":"The difference between median earnings of men and women relative to median earnings of men between 2016 and 2020",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+    
+     "data": {
+      "url": "genderPayGap_Aus2.csv",
+      "format": {"type": "csv"}
+    },
+  
+    
+    
+    "height": 300,
+    "width": 310,
+     
+    "mark": {"type": "line", "point": false},
+   
+    "encoding": {
+  
+      "x": {
+        "field": "LOCATION",
+        "type": "nominal",
+        "title": "Country",
+        "axis": {"grid": false}
+      },
+  
+      "y": {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Gender pay gap, %",
+        "axis": {"grid": false}
+      },
+  
+      "color": {
+        "field": "LOCATION",
+        "type": "nominal",
+        "scale": {"scheme": "set1"},
+        "title": "Country",
+        "legend": {
+          "orient": "top-left", 
+          "fillColor": "#FcFdFd"}
+      }
+  }
+  }
