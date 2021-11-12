@@ -47,3 +47,12 @@ color: #e4effa;
 }
     
   
+a:link, a:visited {
+  color: #f3f3f2;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active, a:visited:active {
+  color: #e7ebe4;
+}
