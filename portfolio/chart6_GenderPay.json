@@ -11,7 +11,7 @@
     },
     
      "data": {
-      "url": "genderPayGap_Aus2.csv",
+      "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/genderPayGap_Aus2.csv",
       "format": {"type": "csv"}
     },
   
@@ -25,9 +25,9 @@
     "encoding": {
   
       "x": {
-        "field": "LOCATION",
-        "type": "nominal",
-        "title": "Country",
+        "field": "TIME",
+        "type": "temporal",
+        "title": "Year",
         "axis": {"grid": false}
       },
   
