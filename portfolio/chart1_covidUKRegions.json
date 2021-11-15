@@ -16,10 +16,8 @@
   },
 
 
-
-  "height": 300,
-  
-  "width": 280,
+"height": 300,
+  "width": 345,
   
   "mark": {"type": "bar", "width":10},
   
