@@ -11,16 +11,30 @@
     },
     
      "data": {
-      "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/genderPayGap_Aus2.csv",
+      "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/genderPayGap_NOR2.csv",
       "format": {"type": "csv"}
     },
+
+    "transform":[
+     
+        {"filter": {
+          "field": "LOCATION", 
+          "oneOf": ["NOR", "NOR*2", "AUS","SWE","USA","AUS","SWE","JPN"]}
+          }
+      ],
   
     
     
     "height": 300,
     "width": 310,
      
-    "mark": {"type": "line", "point": false},
+     "mark": {
+    "type": "line",
+    "point": {
+      "filled": false,
+      "fill": "white"
+    }
+   },
    
     "encoding": {
   
@@ -28,7 +42,7 @@
         "field": "TIME",
         "type": "temporal",
         "title": "Year",
-        "axis": {"grid": false}
+        "axis": {"format": "%Y"}
       },
   
       "y": {
@@ -41,10 +55,10 @@
       "color": {
         "field": "LOCATION",
         "type": "nominal",
-        "scale": {"scheme": "set1"},
+        "scale": {"scheme": "tableau20"},
         "title": "Country",
         "legend": {
-          "orient": "top-left", 
+          "orient": "right", 
           "fillColor": "#FcFdFd"}
       }
   }
