@@ -1,0 +1,59 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {
+        "background": "white",
+        "view": {
+            "stroke": "transparent"
+        }
+    },
+    "title": {
+        "text": "Average UK carbon monoxide emissions",
+        "anchor": "start",
+        "color": "black",
+        "subtitle": "Daily average of CO value",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "subtitleColor": "black"
+    },
+    "data": {
+        "url": "https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01"
+    },
+    "mark": {
+        "type": "point"
+    },
+    "width": 300,
+    "height": 300,
+    "encoding": {
+        "x": {
+            "field": "start",
+            "type": "temporal",
+            "title": "Month, 2021",
+            "sort": "-y",
+            "axis": {
+                "domainColor": "dimgrey",
+                "labelColor": "black",
+                "tickColor": "dimgrey",
+                "gridColor": "black"
+            }
+        },
+        "y": {
+            "field": "average",
+            "type": "quantitative",
+            "title": "Carbon monoxide, Mol/M^2",
+            "axis": {
+                "domainColor": "dimgrey",
+                "labelColor": "black",
+                "tickColor": "dimgrey",
+                "gridColor": "black"
+            }
+        },
+        "color": {
+            "field": "start",
+            "timeUnit": "month",
+            "scale": {
+                "scheme": "inferno"
+            },
+            "title": "Month"
+        }
+    }
+}
