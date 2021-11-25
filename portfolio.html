@@ -83,7 +83,7 @@
 
 
 <p> This is my fifth chart showing double vaccinations using data hosted on Github that was originally collected from a <a href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
-<!--Chart 5: Double vaccinations, CSV file-->
+<!--Chart 5: Double vaccinations, hosted on Github-->
 <div class="chart" id="chart5">
   <script>
     var myChart5 = "portfolio/chart5_doubleVaxStatic.json";
@@ -103,11 +103,22 @@
 </div>
   
 <p> This is my seventh chart which presents cumulative LFD tests using "in-line" JSON data that I wrote myself. This was also collected from the <a href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
-<!--Chart 7: Cum LFD tests, CSV file-->
+<!--Chart 7: Cum LFD tests, in line JSON-->
 <div class="chart" id="chart7">
   <script>
     var myChart7 = "portfolio/chart7_cumLFDTests_JSO.json";
     vegaEmbed('#chart7', myChart7)
+  </script>
+</div>
+  
+  <h3> Skill 5</h3>
+  
+ <p> This is my eighth chart which draws on data from an <a href="https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01">API</a> that holds data about carbon emissions across many countries. I specifically edited the URL to be UK specific spanning data from January to September (inclusive) of 2021.</p>
+<!--Chart 8: Carbon emissions, API-->
+<div class="chart" id="chart8">
+  <script>
+    var myChart8 = "portfolio/chart8_carbonMonoxideEmissions.json";
+    vegaEmbed('#chart8', myChart8)
   </script>
 </div>
   
