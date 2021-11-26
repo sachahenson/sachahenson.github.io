@@ -113,7 +113,7 @@
   
   <h3> Skill 5</h3>
   
- <p> This is my eighth chart which draws on data from an <a href="https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01">API</a> that holds data about carbon emissions across many countries. I specifically edited the URL to be UK specific spanning data from January to September (inclusive) of 2021.</p>
+ <p> This is my eighth chart which draws on data from an <a href="https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01">API</a> about carbon emissions across many countries. I specifically edited the URL to be UK specific spanning data from January to September (inclusive) of 2021.</p>
 <!--Chart 8: Carbon emissions, API-->
 <div class="chart" id="chart8">
   <script>
@@ -122,7 +122,7 @@
   </script>
 </div>
   
- <p> This is my ninth chart which draws on data from the <a href="https://data.police.uk/api/crimes-street/all-crime?lat=51.54502&lng=-0.10752">police API</a> that takes record of offences committed at a given latitude/longitude set of coordinates. This example takes the coordinates from the Highbury and Islington tube station and shows the crimes committed at the latest month that data is available for.</p>
+ <p> This is my ninth chart which draws on data from the <a href="https://data.police.uk/api/crimes-street/all-crime?lat=51.54502&lng=-0.10752">police API</a> that takes record of offences committed at a given latitude/longitude set of coordinates. This example takes the coordinates from the Highbury and Islington tube station and shows the crimes committed during the latest month that data is available for.</p>
 <div class="chart" id="chart9">
   <script>
     var myChart9= "portfolio/chart9_tubeCrime.json";
@@ -130,6 +130,41 @@
   </script>
 </div>
   
+  
+ <h3> Skill 6</h3>
+  
+ <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using loops in Google Colab and then these JSON files were uploaded to Github. All of the files used to create these charts can be found on my Github under portfolio/Skill 6.</p>
+<!--Chart 10: JPY to USD, API-->
+<div class="chart" id="chart10">
+  <script>
+    var myChart10 = "portfolio/chart10_DEXJPUS.json";
+    vegaEmbed('#chart10', myChart10)
+  </script>
+</div>
+  
+<!--Chart 11: USD to GBP, API-->
+<div class="chart" id="chart11">
+  <script>
+    var myChart11 = "portfolio/chart11_DEXUSUK.json";
+    vegaEmbed('#chart11', myChart11)
+  </script>
+</div>
+  
+<!--Chart 12: Employment Population ratio for Women, API-->
+<div class="chart" id="chart12">
+  <script>
+    var myChart12 = "portfolio/chart10_employRatioW.json";
+    vegaEmbed('#chart12', myChart12)
+  </script>
+</div>
+  
+<!--Chart 13: unemployment rate, API-->
+<div class="chart" id="chart13">
+  <script>
+    var myChart13 = "portfolio/chart10_UNRATE.json";
+    vegaEmbed('#chart13', myChart13)
+  </script>
+</div>
   
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
