@@ -1,0 +1,58 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Athletic world records",
+        "subtitle": "Sorted by gender and country",
+        "subtitleFontStyle": "italic",
+        "subtitleFontSize": 10,
+        "anchor": "start",
+        "color": "black"
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%207/athletic_records.csv"
+    },
+    "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 3,
+        "cornerRadiusTopRight": 3
+    },
+    "transform": [
+        {
+            "calculate": "datum.__count",
+            "as": "b2"
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Country",
+            "type": "nominal"
+        },
+        "y": {
+            "field": "Gender",
+            "aggregate": "count",
+            "type": "nominal"
+        },
+        "color": {
+            "field": "Gender",
+            "type": "nominal",
+            "scale": {
+                "domain": [
+                    "F",
+                    "M",
+                    "Mix"
+                ],
+                "range": [
+                    "#FDB589",
+                    "#4C8577",
+                    "#C0D6E4"
+                ]
+            },
+            "title": "Gender",
+            "legend": {
+                "orient": "top-left",
+                "fillColor": "#FcFdFd",
+                "labelExpr": "{'F':'Female','M': 'Male', 'Mix': 'Mixed'}[datum.label]"
+            }
+        }
+    }
+}
