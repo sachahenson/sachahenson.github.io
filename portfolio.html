@@ -147,9 +147,9 @@
 
     <h3> Skill 6</h3>
 
-    <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using loops in Google
-        Colab and then these JSON files were uploaded to Github. All of the files used to create these charts can be
-        found on my Github under portfolio/Skill 6.</p>
+    <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using loops in
+        Colaboratory and then these JSON files were uploaded to Github. All of the files used to create these charts can
+        befound on my Github under portfolio/Skill 6.</p>
     <!--Chart 10: JPY to USD, API-->
     <div class="chart" id="chart10">
         <script>
@@ -196,6 +196,23 @@
         </script>
     </div>
 
+
+    <h3> Skill 8</h3>
+
+    <p> At the Talking Economics conference on 19th November, Dimitri Zenghleis claimed that "low corruption leads to
+        prosperity". I investigated this claim by merging data about the <a
+            href="https://www.transparency.org/en/cpi/2020/index/nzl">Corruptions Perception Index (CPI)</a> and the <a
+            href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm">GDP per capita</a> of various
+        countries using Colaboratory. From this chart I have produced, we can see that there is a relationship between a
+        high CPI index which indicates low corruption and a high GDP per capita to indicate prosperity, thereby
+        corrobating Dimitri's claim.</p>
+    <!--Chart 14: corruption GDP per capita, colab-->
+    <div class="chart" id="chart15">
+        <script>
+            var myChart15 = "portfolio/Skill 8/chart15_talkingEconomics.json";
+            vegaEmbed('#chart15', myChart15)
+        </script>
+    </div>
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
