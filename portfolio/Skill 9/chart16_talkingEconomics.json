@@ -10,26 +10,47 @@
     "data": {
         "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%209/corruption_gdppercap.csv"
     },
-    "mark": {
-        "type": "circle",
-        "color": "red",
-        "size": 100
-    },
     "height": 300,
     "width": 345,
-    "encoding": {
-        "x": {
-            "field": "CPI score 2020",
-            "type": "quantitative",
-            "title": "CPI score"
+
+
+    
+    "layer":[
+        {"mark": {
+            "type": "circle",
+            "color": "red",
+            "size": 100
         },
-        "y": {
-            "field": "GDP per capita",
-            "type": "quantitative"
-        },
-        "tooltip": {
-            "field": "Country name",
-            "type": "nominal"
+        "encoding": {
+            "x": {
+                "field": "CPI score 2020",
+                "type": "quantitative",
+                "title": "CPI score",
+                "scale":{"domain":[20,100]}
+            },
+            "y": {
+                "field": "GDP per capita",
+                "type": "quantitative"
+            },
+            "tooltip": {
+                "field": "Country name",
+                "type": "nominal"
+            }
         }
-    }
+        },
+        {
+        "data": {
+          "values": [
+            {"y": "12804.14", "x": "25"},
+            {"y": "69938.14", "x": "95"}
+            ]
+        },
+        "mark": {"type": "line", "strokeDash": [3, 1], "color": "grey"},
+        "encoding": {
+          "x": {"field": "x", "type": "quantitative"},
+          "y": {"field": "y", "type": "quantitative"}
+        }
+        
+        }
+    ]
 }
