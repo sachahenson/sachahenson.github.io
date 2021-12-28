@@ -39,11 +39,11 @@
 
 <body>
 
-    <h1> CURRENTLY UNDER CONSTRUCTION: My Data Science Portfolio, 2021.</h1>
+    <h1> My Data Science Portfolio, 2021.</h1>
 
     <h3>Click <a href="https://sachahenson.github.io/project.html">here</a> to view my project </h3>
 
-    <h3> Skill 2</h3>
+    <h3> Skill 2 - Embedding</h3>
     <p>This is my first interactive chart to present Covid Cases in UK regions. This uses an example given in class.</p>
     <!--Chart 1 -->
     <div class="chart" id="chart1">
@@ -73,7 +73,7 @@
         </script>
     </div>
 
-    <h3> Skill 3 </h3>
+    <h3> Skill 3 - Hosting Data</h3>
     <p>This is my fourth chart which I created myself which uses data from a <a
             href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
     <!--Chart 4: Cumulative Covid cases, API-->
@@ -95,7 +95,7 @@
         </script>
     </div>
 
-    <h3> Skill 4 </h3>
+    <h3> Skill 4 - Editing Data, Writing JSON by Hand</h3>
 
     <p> This is my sixth chart which presents shows the gender pay gap across OECD countries between 2016-2020. I
         changed this data by adding in a variable "NOR*2" which is the Norway values multiplied by 2. This data is from
@@ -118,7 +118,7 @@
         </script>
     </div>
 
-    <h3> Skill 5</h3>
+    <h3> Skill 5 - API Driven Charts</h3>
 
     <p> This is my eighth chart which draws on data from an <a
             href="https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01">API</a>
@@ -145,7 +145,7 @@
     </div>
 
 
-    <h3> Skill 6</h3>
+    <h3> Skill 6 - Loops and APIs</h3>
 
     <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using loops in
         Colaboratory and then these JSON files were uploaded to Github. All of the files used to create these charts can
@@ -182,7 +182,7 @@
         </script>
     </div>
 
-    <h3> Skill 7</h3>
+    <h3> Skill 7 - Loops and Scrapers</h3>
 
     <p> This chart was created using data scraped from the <a
             href="https://www.worldathletics.org/records/by-category/world-records">World Athletics <i>World
@@ -197,22 +197,45 @@
     </div>
 
 
-    <h3> Skill 8</h3>
+    <h3> Skill 8 - Data Stories</h3>
 
-    <p> At the Talking Economics conference on 19th November, Dimitri Zenghleis claimed that "low corruption leads to
+    <p> At the Talking Economics conference on 19th November, Andrea Aldridge claimed that "the pandemic has widened the
+        educational attainment gap between girls and boys". I investigated this claim by finding data about the
+        proportion of GCSEs that were awarded a pass (C/4) or higher by gender from <a
+            href="https://www.statista.com/statistics/282484/gcse-pass-rate-in-uk-by-gender/">Statista</a> (originally
+        collected from the <a
+            href="https://www.jcq.org.uk/wp-content/uploads/2021/08/GCSE-Full-Course-Results-Summer-2021.pdf">JCQ
+            publication</a>). I then created a chart which shows the year on year difference between the average
+        percentage points awarded to female and male students. Since 2020 (i.e. the beginning of
+        the pandemic), we can observe negative change in the difference between male and female grades as indicated by
+        the dark purple negative bar lines. This means that the grade gap between female and male GCSE students
+        has actually contracted since the pandemic thus refuting Andrea's claim according to this evidence.</p>
+    <!--Chart 15: corruption GDP per capita, colab-->
+    <div class="chart" id="chart16">
+        <script>
+            var myChart16 = "portfolio/Skill 9/chart16_talkingEconomics.json";
+            vegaEmbed('#chart16', myChart15)
+        </script>
+    </div>
+
+    <h3> Skill 9 - Advanced Analytics</h3>
+
+    <p> For chart 16, I also took inspiration from the Talking Economics conference. During the climate
+        crisis panel, Dimitri Zenghleis claimed that "low corruption leads to
         prosperity". I investigated this claim by merging data about the <a
             href="https://www.transparency.org/en/cpi/2020/index/nzl">Corruptions Perception Index (CPI)</a> and the <a
             href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm">GDP per capita</a> of various
         countries using Colaboratory. From this chart I have produced, we can see that there is a relationship between a
         high CPI index which indicates low corruption and a high GDP per capita to indicate prosperity, thereby
         corrobating Dimitri's claim.</p>
-    <!--Chart 14: corruption GDP per capita, colab-->
-    <div class="chart" id="chart15">
+    <!--Chart 16: corruption GDP per capita, colab-->
+    <div class="chart" id="chart16">
         <script>
-            var myChart15 = "portfolio/Skill 9/chart15_talkingEconomics.json";
-            vegaEmbed('#chart15', myChart15)
+            var myChart16 = "portfolio/Skill 9/chart16_talkingEconomics.json";
+            vegaEmbed('#chart16', myChart15)
         </script>
     </div>
+
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
 
