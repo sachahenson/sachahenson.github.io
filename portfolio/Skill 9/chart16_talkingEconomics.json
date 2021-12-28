@@ -48,7 +48,7 @@
         "mark": {"type": "line", "strokeDash": [3, 1], "color": "grey"},
         "encoding": {
           "x": {"field": "x", "type": "quantitative"},
-          "y": {"field": "y", "type": "quantitative"}
+          "y": {"field": "y", "type": "quantitative", "title":"GDP per capita"}
         }
         
         }
