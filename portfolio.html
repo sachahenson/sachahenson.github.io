@@ -19,7 +19,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <!--CSS-->
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="index2.css">
 
 
 
@@ -38,203 +38,344 @@
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
 <body>
-
-    <h1> My Data Science Portfolio, 2021.</h1>
-
-    <h3>Click <a href="https://sachahenson.github.io/project.html">here</a> to view my project </h3>
-
-    <h3> Skill 2 - Embedding</h3>
-    <p>This is my first interactive chart to present Covid Cases in UK regions. This uses an example given in class.</p>
-    <!--Chart 1 -->
-    <div class="chart" id="chart1">
-        <script>
-            var myChart1 = "portfolio/chart1_covidUKRegions.json";
-            vegaEmbed('#chart1', myChart1);
-        </script>
-    </div>
-
-    <p>This is my second chart using data to show UK productivity. This was produced using an example provided in class.
-    </p>
-    <!--Chart 2 -->
-    <div class="chart" id="chart2">
-        <script>
-            var myChart2 = "portfolio/chart2_ukProductivity.json";
-            vegaEmbed('#chart2', myChart2);
-        </script>
-    </div>
-
-    <p>This is my third chart presenting the most common brands that litter the UK's beaches. I produced this myself
-        using data sourced from the <a href="https://rapidcharts.io/environment"> Rapid Charts site</a>.</p>
-    <!--Chart 3: Beach litter-->
-    <div class="chart" id="chart3">
-        <script>
-            var myChart3 = "portfolio/chart3_beachlitter.json";
-            vegaEmbed('#chart3', myChart3)
-        </script>
-    </div>
-
-    <h3> Skill 3 - Hosting Data</h3>
-    <p>This is my fourth chart which I created myself which uses data from a <a
-            href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
-    <!--Chart 4: Cumulative Covid cases, API-->
-    <div class="chart" id="chart4">
-        <script>
-            var myChart4 = "portfolio/chart4_cumCasesAPI.json";
-            vegaEmbed('#chart4', myChart4)
-        </script>
-    </div>
+    <!--Background animation-->
+    <div class="container-fluid">
+        <div class="background2">
 
 
-    <p> This is my fifth chart showing double vaccinations using data hosted on Github that was originally collected
-        from a <a href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
-    <!--Chart 5: Double vaccinations, hosted on Github-->
-    <div class="chart" id="chart5">
-        <script>
-            var myChart5 = "portfolio/chart5_doubleVaxStatic.json";
-            vegaEmbed('#chart5', myChart5)
-        </script>
-    </div>
+            <!--Title bar-->
+            <div>
 
-    <h3> Skill 4 - Editing Data, Writing JSON by Hand</h3>
+                <div class="title-bar">
+                    <h1 style="color:#b5efe0"><b>skills</b></h1>
+                    <h1> portfolio</h1>
+                    <p>Sacha Henson | Student ID: 1930431</p>
+                </div>
 
-    <p> This is my sixth chart which presents shows the gender pay gap across OECD countries between 2016-2020. I
-        changed this data by adding in a variable "NOR*2" which is the Norway values multiplied by 2. This data is from
-        the <a href="https://data.oecd.org/earnwage/gender-wage-gap.htm">OECD site</a>.</p>
-    <!--Chart 6: Gender pay gap, CSV file-->
-    <div class="chart" id="chart6">
-        <script>
-            var myChart6 = "portfolio/chart6_GenderPay.json";
-            vegaEmbed('#chart6', myChart6)
-        </script>
-    </div>
+                <div class="main2">
+                    <p>This page presents a gallery of charts that demonstrate a competency of a variety of skills
+                        including:</p>
+                    <div class="container">
+                        <div class="box2">HTML</div>
+                        <div class="box2">CSS</div>
+                        <div class="box2">JavaScript</div>
+                        <div class="box2">Python/Google Colab</div>
+                    </div>
+                    <p>Using these skills, I then investigated the question of 'Does crime affect house prices?'.
+                        <br>You
+                        can
+                        find out more by clicking <a href="project2.html">here for
+                            my project page</a>.
+                    </p>
+                </div>
+            </div>
 
-    <p> This is my seventh chart which presents cumulative LFD tests using "in-line" JSON data that I wrote myself. This
-        was also collected from the <a href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
-    <!--Chart 7: Cum LFD tests, in line JSON-->
-    <div class="chart" id="chart7">
-        <script>
-            var myChart7 = "portfolio/chart7_cumLFDTests_JSO.json";
-            vegaEmbed('#chart7', myChart7)
-        </script>
-    </div>
+            <div class="break">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
 
-    <h3> Skill 5 - API Driven Charts</h3>
+            <h2> Skill 2 - Embedding</h2>
 
-    <p> This is my eighth chart which draws on data from an <a
-            href="https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01">API</a>
-        about carbon emissions across many countries. I specifically edited the URL to be UK specific spanning data from
-        January to September (inclusive) of 2021.</p>
-    <!--Chart 8: Carbon emissions, API-->
-    <div class="chart" id="chart8">
-        <script>
-            var myChart8 = "portfolio/chart8_carbonMonoxideEmissions.json";
-            vegaEmbed('#chart8', myChart8)
-        </script>
-    </div>
+            <div class="container">
 
-    <p> This is my ninth chart which draws on data from the <a
-            href="https://data.police.uk/api/crimes-street/all-crime?lat=51.54502&lng=-0.10752">police API</a> that
-        takes record of offences committed at a given latitude/longitude set of coordinates. This example takes the
-        coordinates from the Highbury and Islington tube station and shows the crimes committed during the latest month
-        that data is available for.</p>
-    <div class="chart" id="chart9">
-        <script>
-            var myChart9 = "portfolio/chart9_tubeCrime.json";
-            vegaEmbed('#chart9', myChart9)
-        </script>
-    </div>
+                <div class="box">
+                    <p>This is my first interactive chart to present Covid Cases in UK regions. This uses an example
+                        given
+                        in
+                        class.</p>
+                    <!--Chart 1 -->
+                    <div class="chart" id="chart1">
+                        <script>
+                            var myChart1 = "portfolio/chart1_covidUKRegions.json";
+                            vegaEmbed('#chart1', myChart1);
+                        </script>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>This is my second chart using data to show UK productivity. This was produced using an example
+                        provided
+                        in class.
+                    </p>
+                    <!--Chart 2 -->
+                    <div class="chart" id="chart2">
+                        <script>
+                            var myChart2 = "portfolio/chart2_ukProductivity.json";
+                            vegaEmbed('#chart2', myChart2);
+                        </script>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p>This is my third chart presenting the most common brands that litter the UK's beaches. I produced
+                        this
+                        myself
+                        using data sourced from the <a href="https://rapidcharts.io/environment"> Rapid Charts site</a>.
+                    </p>
+                    <!--Chart 3: Beach litter-->
+                    <div class="chart" id="chart3">
+                        <script>
+                            var myChart3 = "portfolio/chart3_beachlitter.json";
+                            vegaEmbed('#chart3', myChart3)
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2> Skill 3 - Hosting Data</h2>
+
+            <div class="container">
+                <div class="box">
+                    <p>This is my fourth chart which I created myself which uses data from a <a
+                            href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
+                    <!--Chart 4: Cumulative Covid cases, API-->
+                    <div class="chart" id="chart4">
+                        <script>
+                            var myChart4 = "portfolio/chart4_cumCasesAPI.json";
+                            vegaEmbed('#chart4', myChart4)
+                        </script>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p> This is my fifth chart showing double vaccinations using data hosted on Github that was
+                        originally
+                        collected
+                        from a <a href="https://coronavirus.data.gov.uk/details/download">government API</a>.</p>
+                    <!--Chart 5: Double vaccinations, hosted on Github-->
+                    <div class="chart" id="chart5">
+                        <script>
+                            var myChart5 = "portfolio/chart5_doubleVaxStatic.json";
+                            vegaEmbed('#chart5', myChart5)
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <h2> Skill 4 - Editing Data, Writing JSON by Hand</h2>
+            <div class="container">
+                <div class="box">
+                    <p> This is my sixth chart which presents shows the gender pay gap across OECD countries between
+                        2016-2020.
+                        I
+                        changed this data by adding in a variable "NOR*2" which is the Norway values multiplied by 2.
+                        This
+                        data
+                        is from
+                        the <a href="https://data.oecd.org/earnwage/gender-wage-gap.htm">OECD site</a>.</p>
+                    <!--Chart 6: Gender pay gap, CSV file-->
+                    <div class="chart" id="chart6">
+                        <script>
+                            var myChart6 = "portfolio/chart6_GenderPay.json";
+                            vegaEmbed('#chart6', myChart6)
+                        </script>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <p> This is my seventh chart which presents cumulative LFD tests using "in-line" JSON data that I
+                        wrote
+                        myself. This
+                        was also collected from the <a
+                            href="https://coronavirus.data.gov.uk/details/download">government
+                            API</a>.</p>
+                    <!--Chart 7: Cum LFD tests, in line JSON-->
+                    <div class="chart" id="chart7">
+                        <script>
+                            var myChart7 = "portfolio/chart7_cumLFDTests_JSO.json";
+                            vegaEmbed('#chart7', myChart7)
+                        </script>
+                    </div>
+                </div>
+            </div>
 
 
-    <h3> Skill 6 - Loops and APIs</h3>
+            <h2> Skill 5 - API Driven Charts</h2>
+            <div class="container">
+                <div class="box">
+                    <p> This is my eighth chart which draws on data from an <a
+                            href="https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01">API</a>
+                        about carbon emissions across many countries. I specifically edited the URL to be UK specific
+                        spanning
+                        data from
+                        January to September (inclusive) of 2021.</p>
+                    <!--Chart 8: Carbon emissions, API-->
+                    <div class="chart" id="chart8">
+                        <script>
+                            var myChart8 = "portfolio/chart8_carbonMonoxideEmissions.json";
+                            vegaEmbed('#chart8', myChart8)
+                        </script>
+                    </div>
+                </div>
 
-    <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using loops in
-        Colaboratory and then these JSON files were uploaded to Github. All of the files used to create these charts can
-        befound on my Github under portfolio/Skill 6.</p>
-    <!--Chart 10: JPY to USD, API-->
-    <div class="chart" id="chart10">
-        <script>
-            var myChart10 = "portfolio/chart10_DEXJPUS.json";
-            vegaEmbed('#chart10', myChart10)
-        </script>
-    </div>
-
-    <!--Chart 11: USD to GBP, API-->
-    <div class="chart" id="chart11">
-        <script>
-            var myChart11 = "portfolio/chart11_DEXUSUK.json";
-            vegaEmbed('#chart11', myChart11)
-        </script>
-    </div>
-
-    <!--Chart 12: Employment Population ratio for Women, API-->
-    <div class="chart" id="chart12">
-        <script>
-            var myChart12 = "portfolio/chart12_employRatioW.json";
-            vegaEmbed('#chart12', myChart12)
-        </script>
-    </div>
-
-    <!--Chart 13: unemployment rate, API-->
-    <div class="chart" id="chart13">
-        <script>
-            var myChart13 = "portfolio/chart13_unrate.json";
-            vegaEmbed('#chart13', myChart13)
-        </script>
-    </div>
-
-    <h3> Skill 7 - Loops and Scrapers</h3>
-
-    <p> This chart was created using data scraped from the <a
-            href="https://www.worldathletics.org/records/by-category/world-records">World Athletics <i>World
-                Records</i></a> page. I used Colaboratory to manipulate the data to show the distribution of total,
-        female and male records and this file can be found under Portfolio/Skill 7 of my Github page.</p>
-    <!--Chart 14: World Athletic Records, scraping-->
-    <div class="chart" id="chart14">
-        <script>
-            var myChart14 = "portfolio/Skill 7/chart14_athleticRecords.json";
-            vegaEmbed('#chart14', myChart14)
-        </script>
-    </div>
+                <div class="box">
+                    <p> This is my ninth chart which draws on data from the <a
+                            href="https://data.police.uk/api/crimes-street/all-crime?lat=51.54502&lng=-0.10752">police
+                            API</a>
+                        that
+                        takes record of offences committed at a given latitude/longitude set of coordinates. This
+                        example
+                        takes
+                        the
+                        coordinates from the Highbury and Islington tube station and shows the crimes committed during
+                        the
+                        latest month
+                        that data is available for.</p>
+                    <div class="chart" id="chart9">
+                        <script>
+                            var myChart9 = "portfolio/chart9_tubeCrime.json";
+                            vegaEmbed('#chart9', myChart9)
+                        </script>
+                    </div>
+                </div>
+            </div>
 
 
-    <h3> Skill 8 - Data Stories</h3>
+            <h2> Skill 6 - Loops and APIs</h2>
+            <div class="container">
 
-    <p> At the Talking Economics conference on 19th November, Andrea Aldridge claimed that "the pandemic has widened the
-        educational attainment gap between girls and boys". I investigated this claim by finding data about the
-        proportion of GCSEs that were awarded a pass (C/4) or higher by gender from <a
-            href="https://www.statista.com/statistics/282484/gcse-pass-rate-in-uk-by-gender/">Statista</a> (originally
-        collected from the <a
-            href="https://www.jcq.org.uk/wp-content/uploads/2021/08/GCSE-Full-Course-Results-Summer-2021.pdf">JCQ
-            publication</a>). I then created a chart which shows the year on year difference between the proportion of
-        female and male students who achieved a pass or higher. Since 2020 (i.e. the beginning of
-        the pandemic), we can observe negative change in the difference between male and female grades as indicated by
-        the dark purple negative bar lines. This means that the grade gap between female and male GCSE students
-        has actually contracted since the pandemic thus refuting Andrea's claim according to this evidence.</p>
-    <!--Chart 15: GCSE grade gap-->
-    <div class="chart" id="chart15">
-        <script>
-            var myChart15 = "portfolio/Skill 8/chart15_grades.json";
-            vegaEmbed('#chart15', myChart15)
-        </script>
-    </div>
+                <div class="box">
+                    <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using
+                        loops
+                        in
+                        Colaboratory and then these JSON files were uploaded to Github. All of the files used to create
+                        these
+                        charts can
+                        befound on my Github under portfolio/Skill 6.</p>
+                    <div class="container">
+                        <div class="box">
+                            <!--Chart 10: JPY to USD, API-->
+                            <div class="chart" id="chart10">
+                                <script>
+                                    var myChart10 = "portfolio/chart10_DEXJPUS.json";
+                                    vegaEmbed('#chart10', myChart10)
+                                </script>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <!--Chart 11: USD to GBP, API-->
+                            <div class="chart" id="chart11">
+                                <script>
+                                    var myChart11 = "portfolio/chart11_DEXUSUK.json";
+                                    vegaEmbed('#chart11', myChart11)
+                                </script>
+                            </div>
+                        </div>
 
-    <h3> Skill 9 - Advanced Analytics</h3>
+                        <div class="box">
+                            <!--Chart 12: Employment Population ratio for Women, API-->
+                            <div class="chart" id="chart12">
+                                <script>
+                                    var myChart12 = "portfolio/chart12_employRatioW.json";
+                                    vegaEmbed('#chart12', myChart12)
+                                </script>
+                            </div>
+                        </div>
 
-    <p> For chart 16, I also took inspiration from the Talking Economics conference. During the climate
-        crisis panel, Dimitri Zenghleis claimed that "low corruption leads to
-        prosperity". I investigated this claim by merging data from two different sources about the <a
-            href="https://www.transparency.org/en/cpi/2020/index/nzl">Corruptions Perception Index (CPI)</a> and the <a
-            href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm">GDP per capita</a> of various
-        countries using Colaboratory and then layering a best fit line using the regression analysis output. From this chart I have produced, we can see that there is a relationship between a
-        high CPI index which indicates low corruption and a high GDP per capita to indicate prosperity, thereby
-        corrobating Dimitri's claim.</p>
-    <!--Chart 16: corruption GDP per capita, colab-->
-    <div class="chart" id="chart16">
-        <script>
-            var myChart16 = "portfolio/Skill 9/chart16_talkingEconomics.json";
-            vegaEmbed('#chart16', myChart16)
-        </script>
-    </div>
+                        <div class="box">
+                            <!--Chart 13: unemployment rate, API-->
+                            <div class="chart" id="chart13">
+                                <script>
+                                    var myChart13 = "portfolio/chart13_unrate.json";
+                                    vegaEmbed('#chart13', myChart13)
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2> Skill 7 - Loops and Scrapers</h2>
+            <div class="container">
+
+                <div class="box">
+                    <p> This chart was created using data scraped from the <a
+                            href="https://www.worldathletics.org/records/by-category/world-records">World Athletics
+                            <i>World
+                                Records</i></a> page. I used Colaboratory to manipulate the data to show the
+                        distribution of
+                        total,
+                        female and male records and this file can be found under Portfolio/Skill 7 of my Github page.
+                    </p>
+                    <!--Chart 14: World Athletic Records, scraping-->
+                    <div class="chart" id="chart14">
+                        <script>
+                            var myChart14 = "portfolio/Skill 7/chart14_athleticRecords.json";
+                            vegaEmbed('#chart14', myChart14)
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+
+            <h2> Skill 8 - Data Stories</h2>
+
+            <div class="container">
+                <div class="box">
+                    <p> At the Talking Economics conference on 19th November, Andrea Aldridge claimed that "the pandemic
+                        has
+                        widened the
+                        educational attainment gap between girls and boys". I investigated this claim by finding data
+                        about the
+                        proportion of GCSEs that were awarded a pass (C/4) or higher by gender from <a
+                            href="https://www.statista.com/statistics/282484/gcse-pass-rate-in-uk-by-gender/">Statista</a>
+                        (originally
+                        collected from the <a
+                            href="https://www.jcq.org.uk/wp-content/uploads/2021/08/GCSE-Full-Course-Results-Summer-2021.pdf">JCQ
+                            publication</a>). I then created a chart which shows the year on year difference between the
+                        proportion of
+                        female and male students who achieved a pass or higher. Since 2020 (i.e. the beginning of
+                        the pandemic), we can observe negative change in the difference between male and female grades
+                        as
+                        indicated by
+                        the dark purple negative bar lines. This means that the grade gap between female and male GCSE
+                        students
+                        has actually contracted since the pandemic thus refuting Andrea's claim according to this
+                        evidence.</p>
+                    <!--Chart 15: GCSE grade gap-->
+                    <div class="chart" id="chart15">
+                        <script>
+                            var myChart15 = "portfolio/Skill 8/chart15_grades.json";
+                            vegaEmbed('#chart15', myChart15)
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <h2> Skill 9 - Advanced Analytics</h2>
+            <div class="container">
+
+                <div class="box">
+                    <p> For chart 16, I also took inspiration from the Talking Economics conference. During the climate
+                        crisis panel, Dimitri Zenghleis claimed that "low corruption leads to
+                        prosperity". I investigated this claim by merging data from two different sources about the <a
+                            href="https://www.transparency.org/en/cpi/2020/index/nzl">Corruptions Perception Index
+                            (CPI)</a> and
+                        the <a href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm">GDP per capita</a> of
+                        various
+                        countries using Colaboratory and then layering a best fit line using the regression analysis
+                        output.
+                        From this chart I have produced, we can see that there is a relationship between a
+                        high CPI index which indicates low corruption and a high GDP per capita to indicate prosperity,
+                        thereby
+                        corrobating Dimitri's claim.</p>
+                    <!--Chart 16: corruption GDP per capita, colab-->
+                    <div class="chart" id="chart16">
+                        <script>
+                            var myChart16 = "portfolio/Skill 9/chart16_talkingEconomics.json";
+                            vegaEmbed('#chart16', myChart16)
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <footer></footer>
+        </div>
 
 </body>
 <!-- ///////////////////  END BODY //////////////////////////////////// -->
