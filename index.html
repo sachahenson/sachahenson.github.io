@@ -7,23 +7,24 @@
 
 <head>
 
-  <!--The next three lines allow the Vega embed-->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-  <!--Title-->
-  <title>SH Data Science</title>
+    <!--Title-->
+    <title>SH Data Science</title>
 
-  <!--Favicon-->
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <!--CSS-->
-  <link rel="stylesheet" href="CSS/index.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="index2.css">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
-  </style>
+    <!--Font import-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+    </style>
 
 </head>
 
@@ -32,18 +33,36 @@
 
 <body>
 
-  <div class="container">
-    <p align="center">
-    <h3 style="text-align:center">Sacha Henson | Student ID: 1930431</h3>
-    <h3 style="text-align:center">Data Science, 2021</h3>
-    <h1 style="text-align:center" style="color:rgb(255, 85, 85)"><b>CURRENTLY UNDER CONSTRUCTION</b></h1>
-    <h3 style="text-align:center" style="color:red">Completion date: 10/01/2022</h3>
-    <h3 style="text-align:center">Click one of the options below to explore my data science project</h3>
+    <!--Background animation-->
+    <div class="container-fluid">
+        <div class="background">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <!--Title bar-->
 
-    <button class="button" onclick="location.href='https://sachahenson.github.io/project.html'"
-      style="text-align:center"><b>Project</b></button>
-    <button class="button" onclick="location.href='https://sachahenson.github.io/portfolio.html'"
-      style="text-align:center"><b>Portfolio</b></button>
-    </p>
-  </div>
-  </div>
+            <section class="title-bar">
+                <h1 style="color:#b1e8df"><b>data</b></h1>
+                <h1> science
+                </h1>
+                <p>
+                    Sacha Henson | Student ID: 1930431
+                </p>
+            </section>
+
+            <!--Main-->
+
+            <section class="main">
+                <p>Welcome to my website presenting the skills learnt from <br>the University of Bristol Data Science
+                    module.<br>
+                    Please use the options below to explore.</p>
+                <button>About</button>
+                <button onclick="location.href='https://sachahenson.github.io/portfolio.html'">Portfolio</button>
+                <button onclick="location.href='https://sachahenson.github.io/project.html'">Project</button>
+            </section>
+
+        </div>
+    </div>
+</body>
