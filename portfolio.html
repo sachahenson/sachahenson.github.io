@@ -19,7 +19,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <!--CSS-->
-    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="index2.css">
 
 
 
@@ -41,7 +41,13 @@
     <!--Background animation-->
     <div class="container-fluid">
         <div class="background2">
-
+            <!--Nav bar-->
+            <div class="topnav">
+                <a href="index2.html">Home</a>
+                <a href="portfolio2.html">Portfolio</a>
+                <a href="project.html">Project</a>
+                <a href="https://github.com/sachahenson">Github</a>
+            </div>
 
             <!--Title bar-->
             <div>
@@ -52,6 +58,7 @@
                     <p>Sacha Henson | Student ID: 1930431</p>
                 </div>
 
+
                 <div class="main2">
                     <p>This page presents a gallery of charts that demonstrate a competency of a variety of skills
                         including:</p>
@@ -61,12 +68,9 @@
                         <div class="box2">JavaScript</div>
                         <div class="box2">Python/Google Colab</div>
                     </div>
-                    <p>Using these skills, I then investigated the question of 'Does crime affect house prices?'.
-                        <br>You
-                        can
-                        find out more by clicking <a href="project2.html">here for
-                            my project page</a>.
-                    </p>
+                    <p>I used these skills to create my project which considers the question 'Does crime affect house
+                        prices?'. You can find out more or view my Github page where all files and data is hosted by
+                        using the navigation bar.</p>
                 </div>
             </div>
 
@@ -78,6 +82,7 @@
                 <div class="dot"></div>
             </div>
 
+
             <h2> Skill 2 - Embedding</h2>
 
             <div class="container">
@@ -87,6 +92,7 @@
                         given
                         in
                         class.</p>
+
                     <!--Chart 1 -->
                     <div class="chart" id="chart1">
                         <script>
@@ -241,49 +247,42 @@
                 <div class="box">
                     <p> The next 4 charts present data collected from the FRED API. They were batch downloaded using
                         loops
-                        in
+                        in Google
                         Colaboratory and then these JSON files were uploaded to Github. All of the files used to create
                         these
                         charts can
-                        befound on my Github under portfolio/Skill 6.</p>
+                        be found on my Github under portfolio/Skill 6.</p>
                     <div class="container">
-                        <div class="box">
-                            <!--Chart 10: JPY to USD, API-->
-                            <div class="chart" id="chart10">
-                                <script>
-                                    var myChart10 = "portfolio/chart10_DEXJPUS.json";
-                                    vegaEmbed('#chart10', myChart10)
-                                </script>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <!--Chart 11: USD to GBP, API-->
-                            <div class="chart" id="chart11">
-                                <script>
-                                    var myChart11 = "portfolio/chart11_DEXUSUK.json";
-                                    vegaEmbed('#chart11', myChart11)
-                                </script>
-                            </div>
+                        <!--Chart 10: JPY to USD, API-->
+                        <div class="chart" id="chart10">
+                            <script>
+                                var myChart10 = "portfolio/chart10_DEXJPUS.json";
+                                vegaEmbed('#chart10', myChart10)
+                            </script>
                         </div>
 
-                        <div class="box">
-                            <!--Chart 12: Employment Population ratio for Women, API-->
-                            <div class="chart" id="chart12">
-                                <script>
-                                    var myChart12 = "portfolio/chart12_employRatioW.json";
-                                    vegaEmbed('#chart12', myChart12)
-                                </script>
-                            </div>
+                        <!--Chart 11: USD to GBP, API-->
+                        <div class="chart" id="chart11">
+                            <script>
+                                var myChart11 = "portfolio/chart11_DEXUSUK.json";
+                                vegaEmbed('#chart11', myChart11)
+                            </script>
                         </div>
 
-                        <div class="box">
-                            <!--Chart 13: unemployment rate, API-->
-                            <div class="chart" id="chart13">
-                                <script>
-                                    var myChart13 = "portfolio/chart13_unrate.json";
-                                    vegaEmbed('#chart13', myChart13)
-                                </script>
-                            </div>
+                        <!--Chart 12: Employment Population ratio for Women, API-->
+                        <div class="chart" id="chart12">
+                            <script>
+                                var myChart12 = "portfolio/chart12_employRatioW.json";
+                                vegaEmbed('#chart12', myChart12)
+                            </script>
+                        </div>
+
+                        <!--Chart 13: unemployment rate, API-->
+                        <div class="chart" id="chart13">
+                            <script>
+                                var myChart13 = "portfolio/chart13_unrate.json";
+                                vegaEmbed('#chart13', myChart13)
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -297,7 +296,7 @@
                     <p> This chart was created using data scraped from the <a
                             href="https://www.worldathletics.org/records/by-category/world-records">World Athletics
                             <i>World
-                                Records</i></a> page. I used Colaboratory to manipulate the data to show the
+                                Records</i></a> page. I used Google Colaboratory to manipulate the data to show the
                         distribution of
                         total,
                         female and male records and this file can be found under Portfolio/Skill 7 of my Github page.
@@ -333,7 +332,7 @@
                         the pandemic), we can observe negative change in the difference between male and female grades
                         as
                         indicated by
-                        the dark purple negative bar lines. This means that the grade gap between female and male GCSE
+                        the red negative bars. This means that the grade gap between female and male GCSE
                         students
                         has actually contracted since the pandemic thus refuting Andrea's claim according to this
                         evidence.</p>
@@ -358,7 +357,8 @@
                             (CPI)</a> and
                         the <a href="https://data.oecd.org/gdp/gross-domestic-product-gdp.htm">GDP per capita</a> of
                         various
-                        countries using Colaboratory and then layering a best fit line using the regression analysis
+                        countries using Google Colaboratory and then layering a best fit line using the regression
+                        analysis
                         output.
                         From this chart I have produced, we can see that there is a relationship between a
                         high CPI index which indicates low corruption and a high GDP per capita to indicate prosperity,
@@ -374,7 +374,44 @@
                 </div>
             </div>
 
+            <h2> Skill 10 - Interactivity</h2>
+            <div class="container">
+
+                <div class="box">
+                    <p> For charts 17 and 18, I have presented two charts included in my project. Chart 17 was made by
+                        feeding the top 20 most populous UK cities scraped from <a
+                            href="https://www.statista.com/statistics/294645/population-of-selected-cities-in-united-kingdom-uk/">Statista</a>
+                        and then fed into a URL base in Google Colaboratory to collect data from the <a
+                            href="https://landregistry.data.gov.uk/app/ukhpi/browse?from=2000-01-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Funited-kingdom&to=2021-10-01&lang=en">Land
+                            Registry</a> website. It is interactive because the 2020 population
+                        estimates are revealed when your mouse hovers over each chart. Chart 18 was made by cleaning and
+                        merging two datasets from the <a
+                            href="https://data.london.gov.uk/dataset/recorded_crime_summary">Metropolitan Police
+                            (MP)</a> and <a href="https://data.london.gov.uk/dataset/average-house-prices">Land
+                            Registry</a> and is interactive because you can
+                        highlight the data points of individual boroughs via the dropdown menu and zoom in if you scroll
+                        over the chart. </p>
+                    <div class="container">
+                        <!--Chart 17: average house prices across the UK-->
+                        <div class="chart" id="chart17">
+                            <script>
+                                var myChart17 = "portfolio/Skill 10/chart17_UKhousePrices.json";
+                                vegaEmbed('#chart17', myChart17)
+                            </script>
+                        </div>
+                        <!--Chart 18: crime against house prices-->
+                        <div class="chart" id="chart18">
+                            <script>
+                                var myChart18 = "portfolio/Skill 10/chart18_crimeLogHousePrices.json";
+                                vegaEmbed('#chart18', myChart18)
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <footer></footer>
+
         </div>
 
 </body>
