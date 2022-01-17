@@ -1,0 +1,71 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Chart 1: rising house prices since 2000",
+        "subtitle": "Average house prices of the top 20 largest cities by population in the UK between 2000-2020, listed alphabetically",
+        "subtitleFontStyle": "italic",
+        "fontSize": 20,
+        "subtitleFontSize": 15,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
+    },
+    "background": "#273349",
+    "width": 100,
+    "height": 100,
+    "data": {
+        "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/project/My%20datasets/houseprices_pop.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "mark": "line",
+    "encoding": {
+        "facet": {
+            "field": "City",
+            "type": "nominal",
+            "columns": 4,
+            "header": {
+                "titleColor": "#e1e5e4",
+                "labelColor": "#e1e5e4",
+                "titleFontSize":15
+            }
+        },
+        "x": {
+            "field": "Year",
+            "type": "temporal",
+            "title": "Date",
+            "axis": {
+                "grid": true,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 15,
+                "gridColor": "#485772"
+            }
+        },
+        "y": {
+            "field": "All property types",
+            "type": "quantitative",
+            "title": "Price (£)",
+            "axis": {
+                "grid": false,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 13
+            }
+        },
+        "color": {
+            "value": "#429180",
+            "condition": {
+                "test": "datum.City =='London'",
+                "value": "#e8c329"
+            }
+        },
+        "tooltip": [
+            {
+                "field": "Estimated population (2020)",
+                "type": "nominal"
+            }
+        ]
+    }
+}
