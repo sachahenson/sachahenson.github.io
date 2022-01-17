@@ -1,75 +1,90 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A simple bar chart with embedded data.",
-
-  "title": {
-      "text": "Cumulative LFD tests: UK localities",
-      "subtitle":"Total number of Lateral Flow Device tests as of 09/10/2021",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-  },
-
-  "data": {
-    "values": [{
-        "Area name": "East Devon",
-        "Cum LFD tests": 555462
-      },
-      {
-        "Area name": "Havant",
-        "Cum LFD tests": 417144
-      },
-      {
-        "Area name": "Worthing",
-        "Cum LFD tests": 403743
-      },
-      {
-        "Area name": "Bradford",
-        "Cum LFD tests": 1109346
-      },
-      {
-        "Area name": "Westminster",
-        "Cum LFD tests": 369525
-      },
-      {
-        "Area name": "Hounslow",
-        "Cum LFD tests": 783103
-      },
-      {
-        "Area name": "Barnet",
-        "Cum LFD tests": 793349
-      },
-      {
-        "Area name": "Bolton",
-        "Cum LFD tests": 708195
-      },
-      {
-        "Area name": "Barnsley",
-        "Cum LFD tests": 653494
-      },
-      {
-        "Area name": "Redcar and Cleveland",
-        "Cum LFD tests": 372996
-      }]
-  },
- 
-  "height": 300,
-  "width": 345,
-  
-  "mark": {
-    "type":"bar",
-
-    "color": "#8887c7",
-  
-        "strokeWidth":2,
-  
-        "opacity":1
-  },
-
-
-  "encoding": {
-    "x": {"field": "Area name", "type": "nominal", "axis": {"labelAngle": 45}, "title":null},
-    "y": {"field": "Cum LFD tests", "type": "quantitative"}
-  }
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with embedded data.",
+    "title": {
+        "text": "Cumulative LFD tests: UK localities",
+        "subtitle": "Total number of Lateral Flow Device tests as of 09/10/2021",
+        "subtitleFontStyle": "italic",
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
+    },
+    "data": {
+        "values": [
+            {
+                "Area name": "East Devon",
+                "Cum LFD tests": 555462
+            },
+            {
+                "Area name": "Havant",
+                "Cum LFD tests": 417144
+            },
+            {
+                "Area name": "Worthing",
+                "Cum LFD tests": 403743
+            },
+            {
+                "Area name": "Bradford",
+                "Cum LFD tests": 1109346
+            },
+            {
+                "Area name": "Westminster",
+                "Cum LFD tests": 369525
+            },
+            {
+                "Area name": "Hounslow",
+                "Cum LFD tests": 783103
+            },
+            {
+                "Area name": "Barnet",
+                "Cum LFD tests": 793349
+            },
+            {
+                "Area name": "Bolton",
+                "Cum LFD tests": 708195
+            },
+            {
+                "Area name": "Barnsley",
+                "Cum LFD tests": 653494
+            },
+            {
+                "Area name": "Redcar and Cleveland",
+                "Cum LFD tests": 372996
+            }
+        ]
+    },
+    "height": 300,
+    "width": 345,
+    "background": "#273349",
+    "mark": {
+        "type": "bar",
+        "color": "teal",
+        "strokeWidth": 2,
+        "opacity": 1
+    },
+    "encoding": {
+        "x": {
+            "field": "Area name",
+            "type": "nominal",
+            "axis": {
+                "labelAngle": 45,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 15
+            },
+            "title": null
+        },
+        "y": {
+            "field": "Cum LFD tests",
+            "type": "quantitative",
+            "axis": {
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "gridColor": "#485772",
+                "labelFontSize": 13
+            }
+        }
+    }
 }
