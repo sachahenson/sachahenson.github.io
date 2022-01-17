@@ -189,7 +189,7 @@ a:link:active, a:visited:active {
   background-size: 400% 400%;
   animation: Gradient 20s ease infinite;
   position: relative;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   padding:0;
