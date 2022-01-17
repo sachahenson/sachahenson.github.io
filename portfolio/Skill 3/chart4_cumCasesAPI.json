@@ -1,60 +1,78 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
     "title": {
-      "text": "COVID cases: UK localities",
-      "subtitle":"Total number of COVID cases according to publish date",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
+        "text": "COVID cases: UK localities",
+        "subtitle": "Total number of COVID cases according to publish date",
+        "subtitleFontStyle": "italic",
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
-    
-     "data": {
-      "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=cumCasesByPublishDate&format=csv",
-      "format": {"type": "csv"}
+    "data": {
+        "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=cumCasesByPublishDate&format=csv",
+        "format": {
+            "type": "csv"
+        }
     },
-  
-     "transform":[
-        
-        {"filter": {
-          "field": "areaName", 
-          "oneOf": ["Newport", "Cardiff", "Aberdeen City"]}
-          }
-  
-  
-      ],
-    
-    
+    "transform": [
+        {
+            "filter": {
+                "field": "areaName",
+                "oneOf": [
+                    "Newport",
+                    "Cardiff",
+                    "Aberdeen City"
+                ]
+            }
+        }
+    ],
     "height": 300,
     "width": 345,
-     
-    "mark": {"type": "line", "point": false},
-   
+    "background": "#273349",
+    "mark": {
+        "type": "line",
+        "point": false
+    },
     "encoding": {
-  
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "title": null,
-        "axis": {"grid": false}
-      },
-  
-      "y": {
-        "field": "cumCasesByPublishDate",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": false}
-      },
-  
-      "color": {
-        "field": "areaName",
-        "type": "nominal",
-        "scale": {"scheme": "set1"},
-        "title": "Locality",
-        "legend": {
-          "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
-      }
-  }
-  }
+        "x": {
+            "field": "date",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+                "grid": false,
+                "labelColor": "#e1e5e4",
+                "labelFontSize": 15,
+                "titleColor": "#e1e5e4"
+            }
+        },
+        "y": {
+            "field": "cumCasesByPublishDate",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "gridColor": "#485772",
+                "labelFontSize": 13
+            }
+        },
+        "color": {
+            "field": "areaName",
+            "type": "nominal",
+            "scale": {
+                "scheme": "set1"
+            },
+            "title": "Locality",
+            "legend": {
+                "orient": "right",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#c8eae4",
+                "labelFontSize": 12,
+                "titleFontSize": 14
+            }
+        }
+    }
+}
