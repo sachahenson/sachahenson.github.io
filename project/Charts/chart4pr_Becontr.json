@@ -52,6 +52,12 @@
         },
         "value": 1
       }
-    }
+    },
+    "tooltip": [
+            {
+                "field": "category",
+                "type": "nominal"
+            }
+        ]
   }
 }
