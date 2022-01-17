@@ -4,53 +4,95 @@
         "text": "Does low corruption link to prosperity?",
         "subtitle": "GDP per capita against CPI index as of 2020",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start"
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%209/corruption_gdppercap.csv"
     },
     "height": 300,
     "width": 345,
-
-
-    
-    "layer":[
-        {"mark": {
-            "type": "circle",
-            "color": "red",
-            "size": 100
-        },
-        "encoding": {
-            "x": {
-                "field": "CPI score 2020",
-                "type": "quantitative",
-                "title": "CPI score",
-                "scale":{"domain":[20,100]}
+    "background": "#273349",
+    "layer": [
+        {
+            "mark": {
+                "type": "circle",
+                "color": "#86ddd3",
+                "size": 100
             },
-            "y": {
-                "field": "GDP per capita",
-                "type": "quantitative"
-            },
-            "tooltip": {
-                "field": "Country name",
-                "type": "nominal"
+            "encoding": {
+                "x": {
+                    "field": "CPI score 2020",
+                    "type": "quantitative",
+                    "title": "CPI score",
+                    "scale": {
+                        "domain": [
+                            20,
+                            100
+                        ]
+                    },
+                    "axis": {
+                        "labelColor": "#e1e5e4",
+                        "titleColor": "#e1e5e4",
+                        "labelFontSize": 15
+                    }
+                },
+                "y": {
+                    "field": "GDP per capita",
+                    "type": "quantitative",
+                    "axis": {
+                        "labelColor": "#e1e5e4",
+                        "titleColor": "#e1e5e4",
+                        "labelFontSize": 13
+                    }
+                },
+                "tooltip": {
+                    "field": "Country name",
+                    "type": "nominal"
+                }
             }
-        }
         },
         {
-        "data": {
-          "values": [
-            {"y": "12804.14", "x": "25"},
-            {"y": "69938.14", "x": "95"}
-            ]
-        },
-        "mark": {"type": "line", "strokeDash": [3, 1], "color": "grey"},
-        "encoding": {
-          "x": {"field": "x", "type": "quantitative"},
-          "y": {"field": "y", "type": "quantitative", "title":"GDP per capita"}
-        }
-        
+            "data": {
+                "values": [
+                    {
+                        "y": "12804.14",
+                        "x": "25"
+                    },
+                    {
+                        "y": "69938.14",
+                        "x": "95"
+                    }
+                ]
+            },
+            "mark": {
+                "type": "line",
+                "strokeDash": [
+                    3,
+                    1
+                ],
+                "color": "grey"
+            },
+            "encoding": {
+                "x": {
+                    "field": "x",
+                    "type": "quantitative",
+                    "axis": {
+                        "gridColor": "#485772"
+                    }
+                },
+                "y": {
+                    "field": "y",
+                    "type": "quantitative",
+                    "title": "GDP per capita",
+                    "axis": {
+                        "gridColor": "#485772"
+                    }
+                }
+            }
         }
     ]
 }
