@@ -4,13 +4,18 @@
         "text": "Athletic world records",
         "subtitle": "Sorted by gender and country",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
+        "fontSize": 15,
+        "subtitleFontSize": 12,
         "anchor": "start",
-        "color": "black"
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%207/athletic_records.csv"
     },
+    "background": "#273349",
+    "height": 300,
+    "width": 400,
     "mark": {
         "type": "bar",
         "cornerRadiusTopLeft": 3,
@@ -25,12 +30,23 @@
     "encoding": {
         "x": {
             "field": "Country",
-            "type": "nominal"
+            "type": "nominal",
+            "axis": {
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 10
+            }
         },
         "y": {
             "field": "Gender",
             "aggregate": "count",
-            "type": "nominal"
+            "type": "nominal",
+            "axis": {
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "gridColor": "#485772",
+                "labelFontSize": 13
+            }
         },
         "color": {
             "field": "Gender",
@@ -42,15 +58,18 @@
                     "Mix"
                 ],
                 "range": [
-                    "#FDB589",
-                    "#4C8577",
-                    "#C0D6E4"
+                    "#ffffff",
+                    "#67a47f",
+                    "red"
                 ]
             },
             "title": "Gender",
             "legend": {
-                "orient": "top-left",
-                "fillColor": "#FcFdFd",
+                "orient": "right",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#c8eae4",
+                "labelFontSize": 12,
+                "titleFontSize": 14,
                 "labelExpr": "{'F':'Female','M': 'Male', 'Mix': 'Mixed'}[datum.label]"
             }
         }
