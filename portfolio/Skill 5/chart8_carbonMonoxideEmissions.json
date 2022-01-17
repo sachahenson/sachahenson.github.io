@@ -8,12 +8,13 @@
     },
     "title": {
         "text": "Average UK carbon monoxide emissions",
-        "anchor": "start",
-        "color": "black",
         "subtitle": "Daily average of CO value",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "subtitleColor": "black"
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://api.v2.emissions-api.org/api/v2/carbonmonoxide/average.json?country=GB&begin=2021-01-01&end=2021-10-01"
@@ -23,6 +24,7 @@
     },
     "width": 300,
     "height": 300,
+    "background": "#273349",
     "encoding": {
         "x": {
             "field": "start",
@@ -30,10 +32,10 @@
             "title": "Month, 2021",
             "sort": "-y",
             "axis": {
-                "domainColor": "dimgrey",
-                "labelColor": "black",
-                "tickColor": "dimgrey",
-                "gridColor": "black"
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "grid": false,
+                "labelFontSize": 15
             }
         },
         "y": {
@@ -41,19 +43,33 @@
             "type": "quantitative",
             "title": "Carbon monoxide, Mol/M^2",
             "axis": {
-                "domainColor": "dimgrey",
-                "labelColor": "black",
-                "tickColor": "dimgrey",
-                "gridColor": "black"
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "gridColor": "#485772",
+                "labelFontSize": 13
+            },
+            "scale": {
+                "domain": [
+                    0.02,
+                    0.05
+                ]
             }
         },
         "color": {
             "field": "start",
             "timeUnit": "month",
             "scale": {
-                "scheme": "inferno"
+                "scheme": "lighttealblue"
             },
-            "title": "Month"
+            "title": "Month",
+            "legend": {
+                "orient": "right",
+                "fillColor": "#273349",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#c8eae4",
+                "labelFontSize": 12,
+                "titleFontSize": 14
+            }
         }
     }
 }
