@@ -2,12 +2,13 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": {
         "text": "Crime at Highbury and Islington tube station",
-        "anchor": "start",
-        "color": "black",
         "subtitle": "Recent crime by type of offence",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "subtitleColor": "black"
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://data.police.uk/api/crimes-street/all-crime?lat=51.54502&lng=-0.10752"
@@ -20,6 +21,7 @@
     ],
     "width": 300,
     "height": 300,
+    "background": "#273349",
     "mark": {
         "type": "arc",
         "innerRadius": 80
@@ -34,10 +36,15 @@
             "field": "category",
             "type": "nominal",
             "scale": {
-                "scheme": "turbo"
+                "scheme": "redblue"
             },
             "legend": {
-                "title": null
+                "orient": "right",
+                "fillColor": "#273349",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#c8eae4",
+                "title": null,
+                "labelFontSize": 12
             }
         }
     }
