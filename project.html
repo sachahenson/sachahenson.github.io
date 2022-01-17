@@ -7,23 +7,25 @@
 
 <head>
 
-<!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
-<!--Title-->
-<title>SH Data Science</title>
+    <!--Title-->
+    <title>SH Data Science</title>
 
-<!--Favicon-->
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-<!--CSS-->
-<link rel="stylesheet" href="CSS/index.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="index2.css">
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
-</style>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+    </style>
 
 
 
@@ -36,10 +38,260 @@
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
 <body>
+    <!--Background animation-->
+    <div class="container-fluid">
+        <div class="background2">
 
-  <div text-align:"center">  
-    <h1> Sacha Henson project page</h1>
-    <h3>Click <a href="https://sachahenson.github.io/portfolio.html">here</a> to view my portfolio </h3>
-  </div>
-  
+            <!--Nav bar-->
+            <div class="topnav">
+                <a href="index2.html">Home</a>
+                <a href="portfolio2.html">Portfolio</a>
+                <a href="project.html">Project</a>
+                <a href="https://github.com/sachahenson">Github</a>
+            </div>
+
+            <!--Title bar-->
+            <div>
+
+                <div class="title-bar">
+                    <h1 style="color:#b5efe0"><b>project</b></h1>
+                    <h1>page</h1>
+                    <p>Sacha Henson | Student ID: 1930431</p>
+                </div>
+
+
+                <div class="main2">
+                    <div class="container">
+                        <div class="box2">
+                            <h2>Does Crime Affect House Prices?</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="break">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+
+
+            <h2> Introduction</h2>
+
+            <div class="container">
+
+                <div class="box3">
+                    <p>
+                        Accepted economic theory concludes that positive changes in house prices results in more
+                        consumer spending and personal investment. As <a
+                            href="https://www.bankofengland.co.uk/knowledgebank/how-does-the-housing-market-affect-the-economy">two
+                            thirds of Britain’s households are homeowners</a>,
+                        house price inflation increases GDP through the boosted consumption generated from higher levels
+                        of confidence. As GDP is a key indicator of the economy’s performance, it is critical to assess
+                        what influences house prices.</p>
+
+                    <p>One factor affecting house prices is crime as rates of vandalism and anti-social behaviour can be
+                        a signal to prospective buyers of the local community health and crimes such as burglary or
+                        property damage pose a risk to the property itself and personal safety. Intuitively, high crime
+                        rates make local properties less desirable and cost less.</p>
+
+                    <p>Therefore, this project will investigate:</p>
+                    <div class="container">
+                        <div class="box2">
+                            <p>Is there a relationship between house prices and crime?</p>
+                            <p>What is the nature of this relationship?</p>
+                        </div>
+                    </div>
+                    <p>To carry out this investigation, this project focuses on London. Chart 1 supports this as London
+                        house prices have a greater increasing trend compared to England’s other most populated cities
+                        and Chart 2 demonstrates that there is a huge variation in house prices within London thus it is
+                        reasonable to investigate if volatile London house prices are related to local crime rates.</p>
+                    <!--Chart 1: UK house prices -->
+                    <div class="container">
+                        <div class="chart" id="chartpr1">
+                            <script>
+                                var myChartpr1 = "project/chart_pr1.json";
+                                vegaEmbed('#chartpr1', myChartpr1);
+                            </script>
+                        </div>
+                        <!--Chart 2: borough house prices -->
+                        <div class="chart" id="chartpr2">
+                            <script>
+                                var myChartpr2 = "project/chart_boroughouseprices.json";
+                                vegaEmbed('#chartpr2', myChartpr2);
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="break">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <h2> How data was accessed, used and notes on replication</h2>
+
+            <div class="container">
+                <div class="box3">
+                    <p>
+                        Chart 1 was made by feeding the top 20 most populous UK cities scraped from <a
+                            href="https://www.statista.com/statistics/294645/population-of-selected-cities-in-united-kingdom-uk/">Statista</a>
+                        into a loop
+                        in Google Colaboratory (GC) to scrape and save the average property prices for each city from
+                        the <a
+                            href="https://landregistry.data.gov.uk/app/ukhpi/browse?from=2000-01-01&location=http%3A%2F%2Flandregistry.data.gov.uk%2Fid%2Fregion%2Funited-kingdom&to=2021-10-01&lang=en">Land
+                            Registry</a> page into an empty data frame (df). This df was remerged with the Statista
+                        population estimates which are revealed in Chart 1 via tooltip. Chart 2 uses data from a <a
+                            href="https://data.london.gov.uk/dataset/average-house-prices">Land Registry</a> CSV file
+                        and I used GC to convert the appropriate columns into numeric data.
+
+                    </p>
+
+                    <p>Whilst preparing the data for Chart 2, I also logged the median house prices because this would
+                        reduce skewness towards large values. To merge house prices with crime data collected from the
+                        <a href="https://data.london.gov.uk/dataset/recorded_crime_summary">Metropolitan Police
+                            (MP)</a>, I converted the crime data from wide to long format and ensured the
+                        data types of corresponding columns in the house price data matched. Github hosts all the GCs,
+                        original and merged datasets.
+                    </p>
+
+                    <p>
+                        Charts 4 and 5 update automatically and use the coordinates of Becontree and South Kensington
+                        which are underground stations in the lowest and highest average house price boroughs,
+                        respectively. These coordinates are used in the URL for the <a
+                            href="https://data.police.uk/docs/method/crimes-at-location/">MP API</a> of the latest
+                        crimes reported
+                        at those locations.
+                    </p>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="break">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <h2>Challenges in data cleaning and analysis, and the tools used to overcome them</h2>
+
+            <div class="container">
+                <div class="box3">
+                    <p>The main challenge of Chart 1 was converting the scraped city names into the correct format for
+                        the loop. For example, the cities with more than one word such as Edinburgh had to be
+                        decapitalised with hyphens to city-of-edinburgh to be fed into the URL base.Another problem is
+                        that my analysis has a limited scope of 2008-2017 due to collection processes
+                        of the data. To extend this analysis, more data is necessary.</p>
+
+                    <p>The greatest challenge was handling the MP dataset; the crime data for each borough had a major
+                        category (e.g. burglary) with one or more minor categories (e.g. 1. in a dwelling 2. in other
+                        buildings) for each month every year, but for my analysis I only needed total major counts of
+                        crime per year. I used Pandas in GC to make new dfs for each year to individually sum the crime
+                        counts and simultaneously absorb the minor counts of crime into one parent major crime category.
+                        Finally, the annual crime counts were copied into a central df and merged many-to-one with the
+                        logged house prices to establish an all-encompassing df of annual total crime by crime type per
+                        borough with the corresponding year’s median house price.
+                    </p>
+
+                </div>
+            </div>
+            <div class="break">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <h2>My conclusions: is there a relationship between crime and house prices?</h2>
+
+            <div class="container">
+                <div class="box3">
+
+                    <p>Using the merged crime and house price dataset, Matplolib estimated a best fit line and I then
+                        translated this into VegaLite. From Chart 3, I can conclude that there is some positive
+                        relationship between house prices and crime rates across <i>all</i> London. This implies that
+                        higher
+                        crime rates are associated with higher house prices. Whilst this doesn’t establish causality,
+                        this may be because lower house price areas have violent crime as a higher proportion of total
+                        crime, but higher income areas have more incidences of petty crime such as on-the-person theft
+                        as indicated by Chart 4 compared to 5.</p>
+                    <!--Chart 3: frequency x house prices -->
+                    <div class="container">
+                        <div class="chart" id="chartpr3">
+                            <script>
+                                var myChartpr3 = "project/chart_pr2.json";
+                                vegaEmbed('#chartpr3', myChartpr3);
+                            </script>
+                        </div>
+                    </div>
+                    <p>However, the R squared value calculated using the lingress function imported from SciPy in GC is
+                        very low at 0.05, implying that crime explains very little of median house prices. Secondly, the
+                        dropdown menu indicates that despite the existence of a general relationship, it is not borough
+                        specific; each borough’s annual crime count moves around a certain value whilst local house
+                        prices fluctuate. Both observations suggest that house prices are determined by more than local
+                        annual crime. This analysis could be extended by studying how and why some crimes are more
+                        influential on house prices than others, as explored by <a
+                            href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1468-0297.2004.00254.x?saml_referrer">Gibbons</a>.
+                    </p>
+                    </p>
+
+                    <div class="container">
+
+                        <!--Chart 4: Becontree tube crime -->
+
+                        <div class="chart" id="chartpr4">
+                            <script>
+                                var myChartpr4 = "project/chartBecontr_pr4.json";
+                                vegaEmbed('#chartpr4', myChartpr4);
+                            </script>
+                        </div>
+
+                        <!--Chart 7: Kensington tube crime-->
+
+                        <div class="chart" id="chartpr5">
+                            <script>
+                                var myChartpr5 = "project/chartSouthK_pr3.json";
+                                vegaEmbed('#chartpr5', myChartpr5);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="break">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <h2>Related files</h2>
+
+            <div class="container">
+                <div class="box3">
+                    <p>Bank of England, Gibbons</p>
+
+                </div>
+            </div>
+
+            <footer></footer>
+
+        </div>
+
 </body>
+<!-- ///////////////////  END BODY //////////////////////////////////// -->
+
+</html>
