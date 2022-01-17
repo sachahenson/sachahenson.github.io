@@ -4,12 +4,12 @@ body{
     background-color: #273349;
     max-width: 2000px;
     margin: auto;
-    box-sizing:border-box
+    box-sizing:border-box;
 }
 
 h1{
-    color: #d0f1fd;
-    font-family: 'IBM Plex Sans', sans-serif;
+  color: #d0f1fd;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 h2{
@@ -38,12 +38,19 @@ p{
   background-color: #273349;
   border-style: solid;
   border-radius: 5px;
-  border-color: #424751;
+  border-color: #273349;
   margin: auto;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
 }
 
+.vega-bind-name{
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #e1e5e4
+}
+
+.marks{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
 
 /* ============= Clicked links ========= */
 
@@ -59,14 +66,16 @@ a:link:active, a:visited:active {
   /* ============= Title bar ========= */
 
 .title-bar{
-  position: absolute;
+  position: relative;
   top:0%;
   left: 0%;
   width:100%;
   margin: 0;
-  background-color:#273349;
+  background-color:#1c2f51;
   height: auto;
-  line-height:0
+  line-height:0;
+  word-wrap: break-word;
+  padding:10px;
   }
 
 .title-bar h1{ 
@@ -88,27 +97,30 @@ a:link:active, a:visited:active {
 
  .main{
   font-family: 'IBM Plex Sans', sans-serif;
-  margin-top:25%;
+  padding:10px;
+  vertical-align: center;
   text-align: center;
   color:  #EFEEF5;
+  top:50%;
 }
 
 .main p{
   font-size: 25px;
   line-height: 1.5;
   margin: 17px auto;
+  max-width:900px;
 }
 
 .main button{
-  width: 140px;
-  margin:20px 10px;
+  width: 150px;
+  margin:30px 10px;
   color: #273349;
-  font-size: 17px;
+  font-size: 25px;
   border:1px solid #EFEEF5;
   font-weight: 500;
   background: #EFEEF5;
   border-radius: 20px;
-  padding: 10px;
+  padding: 20px;
   cursor:pointer;
   transition: .3s;
   z-index: -1;
@@ -122,7 +134,6 @@ a:link:active, a:visited:active {
 
  .main2{
   font-family: 'IBM Plex Sans', sans-serif;
-  margin-top:17%;
   text-align: center;
   color:  #EFEEF5;
 }
@@ -131,6 +142,7 @@ a:link:active, a:visited:active {
   font-size: 25px;
   line-height: 1.5;
   margin: 17px auto;
+  max-width:900px;
 }
 
 .box2 {
@@ -145,13 +157,14 @@ a:link:active, a:visited:active {
   margin: 10px;
   border-style:solid;
   border-color: #c1e6f8;
+  font-size:25px;
 }
 
 .main2 button{
   width: 140px;
   margin:20px 10px;
   color: #273349;
-  font-size: 17px;
+  font-size: 25px;
   border:1px solid #EFEEF5;
   font-weight: 500;
   background: #EFEEF5;
@@ -263,14 +276,58 @@ a:link:active, a:visited:active {
 
 .box {
   box-sizing:border-box;
-  background-color:#525f75;
+  background-color:#273349;
   width:auto;
   border-radius:10px;
   padding:10px;
   text-align:left;
   display:inline-block;
-  margin: 10px;
-  max-width:500px;
+  margin: 20px;
+  text-overflow: ellipsis;
+  width: auto;
+}
+
+.box p{
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+.box .chart {
+  align-items: center;
+  justify-content: center;
+}
+
+.box3 {
+  box-sizing:border-box;
+  background-color:#273349;
+  width:auto;
+  border-radius:10px;
+  padding:10px;
+  text-align:left;
+  display:inline-block;
+  margin: 20px;
+  text-overflow: ellipsis;
+}
+
+.box3 p{
+  margin: auto;
+  padding: 10px;
+  font-size:20px;
+  text-align:left;
+}
+
+.box3 h2{
+  margin: auto;
+  padding: 10px;
+  width:950px;
+  font-size:20px;
+}
+
+
+.box3 .chart {
+  align-items: center;
+  justify-content: center;
 }
 
 /* ============= Footer ========= */
@@ -279,78 +336,12 @@ footer {
   height: 100px
 }
 
-/* ============= Loading sign ========= */
-body {
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background: #222;
-}
-.loading {
-  display: flex;
-}
-.loading .dot {
-  position: relative;
-  width: 2em;
-  height: 2em;
-  margin: 0.8em;
-  border-radius: 50%;
-}
-.loading .dot::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  border-radius: inherit;
-  animation: wave 2s ease-out infinite;
-}
-.loading .dot:nth-child(1) {
-  background: #7ef9ff;
-}
-.loading .dot:nth-child(1)::before {
-  animation-delay: 0.2s;
-}
-.loading .dot:nth-child(2) {
-  background: #89cff0;
-}
-.loading .dot:nth-child(2)::before {
-  animation-delay: 0.4s;
-}
-.loading .dot:nth-child(3) {
-  background: #4f9cdb;
-}
-.loading .dot:nth-child(3)::before {
-  animation-delay: 0.6s;
-}
-.loading .dot:nth-child(4) {
-  background: #1a61b5;
-}
-.loading .dot:nth-child(4)::before {
-  animation-delay: 0.8s;
-}
-.loading .dot:nth-child(5) {
-  background: #000080;
-}
-.loading .dot:nth-child(5)::before {
-  animation-delay: 1s;
-}
-@keyframes wave {
-  50%, 75% {
-    transform: scale(2.5);
- }
-  80%, 100% {
-    opacity: 0;
- }
-}
-
-
 /* ============= Dot break ========= */
 
 .break {
   display: flex;
   justify-content:center;
+  text-align:left;
 }
 .break .dot {
   position: relative;
@@ -358,6 +349,7 @@ body {
   height: 2em;
   margin: 0.8em;
   border-radius: 50%;
+  text-align: left;
 }
 .break .dot::before {
   position: absolute;
@@ -402,4 +394,128 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  padding:10px;
+  margin:auto;
+  max-width: 85%;
+}
+
+/* ============= Navigation bar ========= */
+
+/* Add a black background color to the top navigation */
+.topnav {
+  position:relative;
+  background-color: #273349;
+  overflow: hidden;
+  justify-items: right;
+  border-bottom:1px solid #EFEEF5;
+  margin-right: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  opacity: 100%;
+  color:#EFEEF5;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #EFEEF5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+/* ============= Phone exceptions ========= */
+@media screen and (max-width: 1000px) {
+  .main p{
+    font-size: 40px;
+    line-height: 1.5;
+    margin: 17px auto;
+    max-width:900px;
+  }
+  .topnav {
+    position:relative;
+    background-color: #273349;
+    overflow: hidden;
+    justify-items: right;
+    border-bottom:1px solid #EFEEF5;
+    margin-right: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    opacity: 100%;
+    color:#EFEEF5
+  }
+  
+
+  .topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 40px;
+  }
+
+  .main button{
+      width: 300px;
+      margin:100px auto ;
+      color: #273349;
+      font-size: 50px;
+      border:1px solid #EFEEF5;
+      font-weight: 500;
+      background: #EFEEF5;
+      border-radius: 20px;
+      padding: 50px;
+      cursor:pointer;
+      transition: .3s;
+      z-index: -1;
+      display:grid;
+  }
+
+.title-bar h1{
+  position: relative;
+  top:0%;
+  left: 0%;
+  width:100%;
+  margin: 0;
+  background-color:#1c2f51;
+  height: auto;
+  line-height:0;
+  word-wrap: break-word;
+  padding:30px;
+  font-size:70px
+  }
+
+p{
+  font-size: 30px;
+}
+.main2 p{
+  font-size: 30px;
+}
+.title-bar p{
+  font-size: 40px;
+}
+h2{
+  font-size: 40px;
+  
+}
+
+.box3 p{
+  font-size:30px;
+}
+
 }
