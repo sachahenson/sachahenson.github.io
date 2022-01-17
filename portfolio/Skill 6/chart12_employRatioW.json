@@ -4,8 +4,11 @@
         "text": "Employment-Population Ratio, Women",
         "subtitle": "This series comes from the 'Current Population Survey (Household Survey)'",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start"
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%206/data-Fred-LNS12300002.json",
@@ -22,10 +25,11 @@
     ],
     "height": 300,
     "width": 300,
+    "background": "#273349",
     "mark": {
         "type": "line",
         "point": false,
-        "color": "red"
+        "color": "#2286da"
     },
     "encoding": {
         "x": {
@@ -34,7 +38,10 @@
             "axis": {
                 "title": null,
                 "grid": false,
-                "labelSeparation": 10
+                "labelSeparation": 10,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 15
             }
         },
         "y": {
@@ -49,15 +56,11 @@
             },
             "axis": {
                 "grid": true,
-                "format": "%"
-            }
-        },
-        "color": {
-            "timeUnit": "year",
-            "field": "date",
-            "title": "Year",
-            "scale": {
-                "scheme": "magma"
+                "format": "%",
+                "gridColor": "#485772",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 13
             }
         },
         "tooltip": [
