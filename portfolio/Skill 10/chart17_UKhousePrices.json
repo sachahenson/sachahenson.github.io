@@ -14,7 +14,7 @@
     "width": 100,
     "height": 100,
     "data": {
-        "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/project/houseprices_pop.csv",
+        "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/project/My datasets/houseprices_pop.csv",
         "format": {
             "type": "csv"
         }
