@@ -1,60 +1,78 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
     "title": {
-      "text": "Double vaccinations: UK localities",
-      "subtitle":"Total number of people fully vaccinated according to date of second dose",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
+        "text": "Double vaccinations: UK localities",
+        "subtitle": "Total number of people fully vaccinated according to date of second dose",
+        "subtitleFontStyle": "italic",
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
-    
-     "data": {
-      "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/cumSecondDoseVax.csv",
-      "format": {"type": "csv"}
+    "data": {
+        "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/cumSecondDoseVax.csv",
+        "format": {
+            "type": "csv"
+        }
     },
-  
-     "transform":[
-        
-        {"filter": {
-          "field": "areaName", 
-          "oneOf": ["St Albans", "York", "Welwyn Hatfield"]}
-          }
-  
-  
-      ],
-    
-    
+    "transform": [
+        {
+            "filter": {
+                "field": "areaName",
+                "oneOf": [
+                    "St Albans",
+                    "York",
+                    "Welwyn Hatfield"
+                ]
+            }
+        }
+    ],
     "height": 300,
     "width": 345,
-     
-    "mark": {"type": "line", "point": false},
-   
+    "background": "#273349",
+    "mark": {
+        "type": "line",
+        "point": false
+    },
     "encoding": {
-  
-      "x": {
-        "field": "date",
-        "type": "temporal",
-        "title": null,
-        "axis": {"grid": false}
-      },
-  
-      "y": {
-        "field": "cumPeopleVaccinatedSecondDoseByVaccinationDate",
-        "type": "quantitative",
-        "title": null,
-        "axis": {"grid": false}
-      },
-  
-      "color": {
-        "field": "areaName",
-        "type": "nominal",
-        "scale": {"scheme": "category10"},
-        "title": "Locality",
-        "legend": {
-          "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
-      }
-  }
-  }
+        "x": {
+            "field": "date",
+            "type": "temporal",
+            "title": null,
+            "axis": {
+                "grid": false,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 15
+            }
+        },
+        "y": {
+            "field": "cumPeopleVaccinatedSecondDoseByVaccinationDate",
+            "type": "quantitative",
+            "title": null,
+            "axis": {
+                "grid": true,
+                "gridColor": "#485772",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 13
+            }
+        },
+        "color": {
+            "field": "areaName",
+            "type": "nominal",
+            "scale": {
+                "scheme": "bluegreen"
+            },
+            "title": "Locality",
+            "legend": {
+                "orient": "right",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#c8eae4",
+                "labelFontSize": 12,
+                "titleFontSize": 14
+            }
+        }
+    }
+}
