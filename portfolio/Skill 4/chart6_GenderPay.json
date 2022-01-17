@@ -1,71 +1,92 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
     "title": {
-      "text": "Gender wage gap, 2016-2020",
-      "subtitle":"The difference between median earnings of men and women relative to median earnings of men",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
+        "text": "Gender wage gap, 2016-2020",
+        "subtitle": "The difference between median earnings of men and women relative to median earnings of men",
+        "subtitleFontStyle": "italic",
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
-    
-     "data": {
-      "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/genderPayGap_NOR2.csv",
-      "format": {"type": "csv"}
+    "data": {
+        "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/genderPayGap_NOR2.csv",
+        "format": {
+            "type": "csv"
+        }
     },
-
-    "transform":[
-     
-        {"filter": {
-          "field": "LOCATION", 
-          "oneOf": ["NOR", "NOR*2", "AUS","SWE","USA","AUS","SWE","JPN"]}
-          }
-      ],
-  
-    
-    
+    "transform": [
+        {
+            "filter": {
+                "field": "LOCATION",
+                "oneOf": [
+                    "NOR",
+                    "NOR*2",
+                    "AUS",
+                    "SWE",
+                    "USA",
+                    "AUS",
+                    "SWE",
+                    "JPN"
+                ]
+            }
+        }
+    ],
+    "background": "#273349",
     "height": 300,
     "width": 345,
-     
-     "mark": {
-    "type": "line",
-    "point": {
-      "filled": false,
-      "fill": "white"
-    }
-   },
-   
-
+    "mark": {
+        "type": "line",
+        "point": {
+            "filled": false,
+            "fill": "#273349"
+        }
+    },
     "encoding": {
-  
-      "x": {
-        "field": "TIME",
-        "type": "temporal",
-        "title": "Year",
-        "axis": {
-          "grid":false,
-          "format": "%Y",
-          "labelSeparation": 10}
-      },
-  
-      "y": {
-        "field": "Value",
-        "type": "quantitative",
-        "title": "Gender pay gap, %",
-        "axis": {"grid": false}
-      },
-  
-      "color": {
-        "field": "LOCATION",
-        "type": "nominal",
-        "scale": {"scheme": "tableau20"},
-        "title": "Country",
-        "legend": {
-          "orient": "right", 
-          "fillColor": "#FcFdFd",
-          "labelExpr": "{'AUS':'Australia','NOR': 'Norway', 'NOR*2': 'Norway*2','JPN': 'Japan', 'SWE':'Sweden','USA':'USA'}[datum.label]"}
-          
-      }
-  }
-  }
+        "x": {
+            "field": "TIME",
+            "type": "temporal",
+            "timeUnit": "year",
+            "title": "Year",
+            "axis": {
+                "grid": false,
+                "format": "%Y",
+                "labelSeparation": 10,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 15
+            }
+        },
+        "y": {
+            "field": "Value",
+            "type": "quantitative",
+            "title": "Gender pay gap, %",
+            "axis": {
+                "grid": false,
+                "domainColor": "#e1e5e4",
+                "tickColor": "#e1e5e4",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 13
+            }
+        },
+        "color": {
+            "field": "LOCATION",
+            "type": "nominal",
+            "scale": {
+                "scheme": "lighttealblue"
+            },
+            "title": "Country",
+            "legend": {
+                "orient": "right",
+                "fillColor": "#273349",
+                "labelExpr": "{'AUS':'Australia','NOR': 'Norway', 'NOR*2': 'Norway*2','JPN': 'Japan', 'SWE':'Sweden','USA':'USA'}[datum.label]",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#c8eae4",
+                "labelFontSize": 12,
+                "titleFontSize": 14
+            }
+        }
+    }
+}
