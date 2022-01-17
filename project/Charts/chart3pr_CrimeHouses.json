@@ -1,0 +1,206 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {
+    "text": "Chart 3: crime rates and house prices",
+    "subtitle": "Annual crime count against median house prices for London between 2008-2017",
+    "subtitleFontStyle": "italic",
+    "fontSize": 20,
+    "subtitleFontSize": 15,
+    "anchor": "start",
+    "color": "#e1e5e4",
+    "subtitleColor": "#e1e5e4"
+  },
+  "height": 500,
+  "width": 545,
+  "config": {
+    "background": "#273349"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/project/My%20datasets/crime_houseprices_annual.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "picked": {
+          "empty": "none",
+          "bind": {
+            "Borough": {
+              "input": "select",
+              "options": [
+                "No borough selected",
+                "Barking and Dagenham",
+                "Barnet",
+                "Bexley",
+                "Brent",
+                "Bromley",
+                "Camden",
+                "Croydon",
+                "Ealing",
+                "Enfield",
+                "Greenwich",
+                "Hackney",
+                "Hammersmith and Fulham",
+                "Haringey",
+                "Harrow",
+                "Havering",
+                "Hillingdon",
+                "Hounslow",
+                "Islington",
+                "Kensington and Chelsea",
+                "Kingston upon Thames",
+                "Lambeth",
+                "Lewisham",
+                "Merton",
+                "Newham",
+                "Redbridge",
+                "Richmond upon Thames",
+                "Southwark",
+                "Sutton",
+                "Tower Hamlets",
+                "Waltham Forest",
+                "Wandsworth",
+                "Westminster"
+              ],
+              "name": "Select a borough: "
+            }
+          },
+          "type": "single",
+          "fields": [
+            "Borough"
+          ]
+        },
+        "grid": {
+          "type": "interval",
+          "bind": "scales",
+          "on": "[mousedown, window:mouseup] > window:mousemove!",
+          "translate": "[mousedown, window:mouseup] > window:mousemove!",
+          "zoom": "wheel!",
+          "resolve": "global"
+        }
+      },
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "color": {
+          "value": "grey",
+          "condition": {
+            "field": "Cluster",
+            "selection": "picked",
+            "type": "nominal",
+            "legend": null
+          }
+        },
+        "size": {
+          "value": 60,
+          "condition": {
+            "value": 120,
+            "selection": "picked"
+          }
+        },
+        "opacity": {
+          "value": 0.4,
+          "condition": {
+            "value": 1,
+            "selection": "picked"
+          }
+        },
+        "x": {
+          "field": "Frequency",
+          "scale": {
+            "zero": false
+          },
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "labelColor": "#e1e5e4",
+            "titleColor": "#e1e5e4",
+            "labelFontSize": 14,
+            "grid": false,
+            "title": "Total annual count of all crimes",
+            "titleFontSize": 18
+          }
+        },
+        "y": {
+          "field": "log_value",
+          "scale": {
+            "zero": false
+          },
+          "type": "quantitative",
+          "axis": {
+            "labelColor": "#e1e5e4",
+            "titleColor": "#e1e5e4",
+            "grid": false,
+            "labelFontSize": 14,
+            "titleFontSize": 18,
+            "title": "Log median house price (£)"
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "y": "12.61003",
+            "x": "9000"
+          },
+          {
+            "y": "13.1999",
+            "x": "69000"
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeDash": [
+          3,
+          1
+        ],
+        "color": "#bcf5e7"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": {
+            "gridColor": "#485772"
+          }
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": {
+            "gridColor": "#485772"
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": 540,
+        "align": "right",
+        "y": 20,
+        "size": 25
+      },
+      "transform": [
+        {
+          "calculate": "0.05",
+          "as": "R2"
+        }
+      ],
+      "encoding": {
+        "text": {
+          "type": "nominal",
+          "field": "R2"
+        }
+      }
+    }
+  ]
+}

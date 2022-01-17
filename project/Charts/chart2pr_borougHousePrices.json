@@ -1,0 +1,62 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with embedded data.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/project/My%20datasets/loghouseprices08-17.csv"
+    },
+    "title": {
+      "text": "Chart 2: house prices across London, 2017",
+      "subtitle": "Median house prices of London boroughs, recorded in December of each year",
+      "subtitleFontStyle": "italic",
+      "fontSize": 20,
+      "subtitleFontSize": 15,
+      "anchor": "start",
+      "color": "#e1e5e4",
+      "subtitleColor": "#e1e5e4"
+    },
+    
+    "height": 300,
+      "width": {"step":20},
+      "background":"#273349",
+    "transform": [
+      {
+        "calculate": "datum.Value/1000000",
+        "as": "2dpValue"
+      },
+     {"calculate": "year(datum.Year)", "as": "Year"},
+      {"filter": "datum.Year==2017"}],
+    "mark":"bar",
+    "encoding": {
+      "x": {"field": "Area", "type": "nominal", 
+      "title":null,
+      
+      "axis":{
+                  "labelColor":"#e1e5e4",
+                  "titleColor":"#e1e5e4",
+                  "labelFontSize":14,
+                  "gridColor":"#485772",
+                  "labelAngle": -45,
+                  "titleFontSize":18
+              }
+              },
+      "y": {"field": "2dpValue", "type": "quantitative",
+      "title":"Median house price in millions of £",
+      "axis":{
+                  "labelColor":"#e1e5e4",
+                  "titleColor":"#e1e5e4",
+                  "labelFontSize":14,
+                  "gridColor":"#485772",
+                  "titleFontSize":18
+              }}
+    ,
+    "color": {
+              "field": "2dpValue",
+              "type": "quantitative",
+              "legend": null,
+              "scale": {
+                  "scheme": "yellowgreenblue"
+              }
+          }
+    }
+  }
+  
