@@ -5,8 +5,11 @@
         "text": "US Dollar to Pound Sterling spot exchange rate",
         "subtitle": "Noon buying rate of US Dollar for 1 Pound Sterling",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
-        "anchor": "start"
+        "fontSize": 15,
+        "subtitleFontSize": 12,
+        "anchor": "start",
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%206/data-Fred-DEXUSUK.json",
@@ -17,10 +20,11 @@
     },
     "height": 300,
     "width": 300,
+    "background": "#273349",
     "mark": {
         "type": "line",
         "point": false,
-        "color": "red"
+        "color": "#67bef0"
     },
     "encoding": {
         "x": {
@@ -29,7 +33,10 @@
             "axis": {
                 "title": null,
                 "grid": false,
-                "labelSeparation": 10
+                "labelSeparation": 10,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 15
             }
         },
         "y": {
@@ -44,15 +51,11 @@
             },
             "axis": {
                 "grid": true,
-                "format": "$.2s"
-            }
-        },
-        "color": {
-            "timeUnit": "year",
-            "field": "date",
-            "title": "Year",
-            "scale": {
-                "scheme": "turbo"
+                "format": "$.2s",
+                "gridColor": "#485772",
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "labelFontSize": 13
             }
         },
         "tooltip": [
