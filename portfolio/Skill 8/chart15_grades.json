@@ -4,9 +4,11 @@
         "text": "Proportion of GCSEs awarded a C/4 or higher",
         "subtitle": "GCSE grades between 2000-2021 for female and male students",
         "subtitleFontStyle": "italic",
-        "subtitleFontSize": 10,
+        "fontSize": 15,
+        "subtitleFontSize": 12,
         "anchor": "start",
-        "color": "black"
+        "color": "#e1e5e4",
+        "subtitleColor": "#e1e5e4"
     },
     "data": {
         "url": "https://raw.githubusercontent.com/sachahenson/sachahenson.github.io/main/portfolio/Skill%208/grades.csv"
@@ -31,24 +33,35 @@
     ],
     "height": 400,
     "width": 350,
+    "background": "#273349",
     "mark": "bar",
     "encoding": {
         "x": {
             "field": "Year",
             "type": "temporal",
             "axis": {
-                "labelAngle": 45
+                "labelAngle": 45,
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "grid": false,
+                "labelFontSize": 15
             }
         },
         "y": {
             "field": "Yearly_difference",
             "type": "quantitative",
-            "title": "Year on year grade gap difference in percentage points"
+            "title": "Year on year grade gap difference in percentage points",
+            "axis": {
+                "labelColor": "#e1e5e4",
+                "titleColor": "#e1e5e4",
+                "gridColor": "#485772",
+                "labelFontSize": 13
+            }
         },
         "color": {
             "field": "Yearly_difference",
             "scale": {
-                "scheme": "purpleorange"
+                "scheme": "redblue"
             },
             "legend": null
         }
